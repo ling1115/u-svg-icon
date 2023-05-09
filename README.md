@@ -11,6 +11,7 @@ index |	一个用于区分多个图标的值，点击图标时通过click事件�
 width |	name为图片路径时图片的宽度，单位默认rpx |	String / Number |	- |	- |
 height | name为图片路径时图片的高度，单位默认rpx |	String / Number	 |-	 |- |
 stop |	是否阻止事件传播，仅支持自定义图标和图片图标 |	Boolean |	false |	- |
+bold |	是否显示粗体, 不支持图片图标 |	Boolean |	false |	- |
 
 ## 2. Event
 

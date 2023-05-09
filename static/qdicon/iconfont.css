@@ -1,13 +1,7 @@
-/* #ifdef MP-WEIXIN */
 @font-face {
   font-family: "qdfont";
   src: url('/static/qdicon/iconfont.ttf') format('truetype');
 }
-/* #endif */
-
-/* #ifndef MP-WEIXIN */
-@import url(https://at.alicdn.com/t/c/font_4011404_wwi9cfkplfr.css); //跟上面的基础字体库一样，这个是远程de
-/* #endif */
 
 .qdfont {
   font-family: "qdfont" !important;

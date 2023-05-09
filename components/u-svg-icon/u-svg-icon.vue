@@ -1,8 +1,8 @@
 <template>
 	<div class='icon-content'>
-		<text v-if="iconName.length > 1" :class="[iconName[0], iconName[1], 'default-color']" :style="{ color: svgFill, fontSize: svgWidth }" @click="svgClick"></text>
-		<image v-else-if="iconName.length == 1 && iconName[0].includes('/')" :src="iconName[0]" mode="" :style="{ height: svgHeight, width: svgWidth }"  @click="svgClick"></image>
-		<uni-icons v-else :type="iconName[0]" style="line-height:72rpx;" :color="svgFill" :size="svgWidth" @click="svgClick"></uni-icons>
+		<text v-if="iconName.length > 1" :class="[iconName[0], iconName[1], 'default-color']" :style="{ color: svgFill, fontSize: svgWidth, fontWeight: this.bold ? 'bold' : 'normal' }" @click="svgClick"></text>
+		<image v-else-if="iconName.length == 1 && iconName[0].includes('/')" :src="iconName[0]" mode="" :style="{ height: svgHeight, width: svgWidth}"  @click="svgClick"></image>
+		<uni-icons v-else :type="iconName[0]" style="line-height:72rpx;" :color="svgFill" :size="svgWidth" :style="{ fontWeight: this.bold ? 'bold' : 'normal' }" @click="svgClick"></uni-icons>
 	</div>
 	
 </template>
@@ -32,7 +32,11 @@ export default {
 		fill: {
 			type: String
 		},
-		stop: [String, Boolean],
+		stop: [Boolean],
+		bold: {
+			type:[Boolean],
+			default:false
+		},
 	},
 	data() {
 		return {
