@@ -8,6 +8,7 @@
 				size="48rpx" 
 				index='0'
 				:stop="true"
+				:bold="true"
 				@click="handleClick"
 			></u-svg-icon>
 		</view>
@@ -20,8 +21,8 @@
 				color="#CC1317"
 				index='1'
 				:stop="true"
-				@click="handleClick"
 				:bold="true"
+				@click="handleClick"
 			></u-svg-icon>
 		</view>
 		<!-- svg -->
@@ -33,7 +34,6 @@
 				index='2'
 				:stop="true"
 				@svg-click="handleClick"
-				:bold="true"
 			></u-svg-icon>
 		</view>
 	</view>
