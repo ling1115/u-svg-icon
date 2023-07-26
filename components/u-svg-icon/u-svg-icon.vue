@@ -2,6 +2,7 @@
 	<div class='icon-content'>
 		<text v-if="iconName.length > 1" :class="[iconName[0], iconName[1], 'default-color']" :style="{ color: svgFill, fontSize: svgWidth, fontWeight: this.bold ? 'bold' : 'normal' }" @click="svgClick"></text>
 		<image v-else-if="iconName.length == 1 && iconName[0].includes('/')" :src="iconName[0]" mode="" :style="{ height: svgHeight, width: svgWidth}"  @click="svgClick"></image>
+		<image v-else-if="iconName.length == 1 && iconName[0].includes('data:image/png;base64')" :src="iconName[0]" mode="" :style="{ height: svgHeight, width: svgWidth }"></image>
 		<uni-icons v-else :type="iconName[0]" style="line-height:72rpx;" :color="svgFill" :size="svgWidth" :style="{ fontWeight: this.bold ? 'bold' : 'normal' }" @click="svgClick"></uni-icons>
 	</div>
 	
@@ -37,6 +38,10 @@ export default {
 			type:[Boolean],
 			default:false
 		},
+		lineHeight:{
+			type: String,
+			default '72rpx'
+		}
 	},
 	data() {
 		return {
@@ -54,6 +59,7 @@ export default {
 			return this.fill || this.color
 		},
 		iconName() {
+			if(this.type.includes('data:image/png;base64')) return [this.type];
 			return this.type.split(' ')
 		}
 	},

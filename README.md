@@ -1,5 +1,5 @@
 # u-svg-icon
-基于字体的图标集，支持uni-icon字体库，支持自定义icon，支持svg
+基于字体的图标集，支持uni-icon字体库，支持自定义icon，支持svg，支持base64
 
 ## 1. Props
 | 参数	| 说明	| 类型	| 默认值	| 是否必填 | 
